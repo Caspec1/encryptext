@@ -1,0 +1,155 @@
+body {
+  font-family: 'Signika Negative', sans-serif;
+  height: 100vh;
+  background-color: #444444;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23149414' fill-opacity='0.18'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 35px;
+}
+
+h1, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #149414;
+}
+
+.logo {
+  width: 50px;
+}
+
+main {
+  height: calc(100vh - 100px);
+  width: 988px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+form {
+  flex: 1;
+}
+
+.form-paragraph {
+  color: #fff;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.input-text {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  background-color: #444444;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.result {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40%;
+  background-color: #444444;
+  padding: 20px 10px;
+}
+
+.text-encrypted {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.encrypted-paragraph {
+  width: 30%;
+  background-color: #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  width: 35%;
+  padding: 10px 20px;
+  border: 1px solid #149414;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.btn-copy {
+  padding: 10px 20px;
+  border: 1px solid #149414;
+  background-color: #149414;
+  color: #fff;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.btn:hover {
+  background-color: #149414;
+}
+
+.btn-copy:hover {
+  background-color: #000;
+}
+
+footer {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #149414;
+  color: #fff;
+}
+
+.copyright {
+  font-size: 18px;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #149414;
+}
