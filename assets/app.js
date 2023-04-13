@@ -51,7 +51,6 @@ function decryptText(text) {
 }
 
 encryptButton.addEventListener('click', () => {
-
   if (!textArea) {
     return Swal.fire({
       icon: 'warning',
@@ -76,12 +75,12 @@ encryptButton.addEventListener('click', () => {
     render.removeChild(render.firstChild)
   }
 
-
   const paragraph = document.createElement('P')
   paragraph.textContent = encrypted
   paragraph.id = 'text-encrypted'
   paragraph.classList.add('text-encrypted')
   render.appendChild(paragraph)
+  form.reset()
 })
 
 decryptButton.addEventListener('click', () => {
@@ -114,6 +113,7 @@ decryptButton.addEventListener('click', () => {
   paragraph.id = 'text-encrypted'
   paragraph.classList.add('text-encrypted')
   render.appendChild(paragraph)
+  form.reset()
 })
 
 text.addEventListener('input', e => {
@@ -121,8 +121,15 @@ text.addEventListener('input', e => {
 })
 
 copyButton.addEventListener('click', () => {
-  const encryptedText = document.querySelector('#text-encrypted').textContent
-  navigator.clipboard.writeText(encryptedText)
+  const encryptedText = document.querySelector('#text-encrypted')
+  if (!encryptedText) {
+    return Swal.fire({
+      icon: 'error',
+      title: 'No hay nada que copiar',
+      text: 'No hay ningún texto procesado'
+    })
+  }
+  navigator.clipboard.writeText(encryptedText.textContent)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
